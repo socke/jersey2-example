@@ -1,3 +1,5 @@
+![Maven build status](https://github.com/FontysVenlo/jersey2-example/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
+
 # Simple Jersey 2 example
 Simple jersey 2 start application - used for Project at Fontys Venlo
 
