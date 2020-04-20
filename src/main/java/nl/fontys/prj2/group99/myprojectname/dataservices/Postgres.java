@@ -10,6 +10,7 @@ import org.postgresql.ds.PGConnectionPoolDataSource;
 import java.sql.*;
 
 /**
+ * The type Postgres.
  *
  * @author Geert Monsieur {@code g.monsieur@fontys.nl}
  */
@@ -20,13 +21,24 @@ public class Postgres {
     private static final String DB_PWD = "mypassword";
     
     private PGConnectionPoolDataSource source;
-    
 
+
+    /**
+     * Instantiates a new Postgres.
+     *
+     * @param server_name the server name
+     */
     public Postgres(String server_name) {
         SERVER_NAME = server_name;
         createPGDataSource();
     }
-    
+
+    /**
+     * Gets connection.
+     *
+     * @return the connection
+     * @throws SQLException the sql exception
+     */
     protected Connection getConnection() throws SQLException {
         return source.getPooledConnection().getConnection();
     }
@@ -38,11 +50,25 @@ public class Postgres {
         source.setUser(DB_USER);
         source.setPassword(DB_PWD);
     }
-    
+
+    /**
+     * Create prepared statement with keys returned prepared statement.
+     *
+     * @param sql the sql
+     * @return the prepared statement
+     * @throws SQLException the sql exception
+     */
     protected PreparedStatement createPreparedStatementWithKeysReturned(String sql) throws SQLException {
         return getConnection().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
     }
 
+    /**
+     * Execute query result set.
+     *
+     * @param sql the sql
+     * @return the result set
+     * @throws SQLException the sql exception
+     */
     protected ResultSet executeQuery(String sql) throws SQLException {
         return getConnection().createStatement().executeQuery(sql);
     }
