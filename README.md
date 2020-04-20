@@ -13,7 +13,7 @@ The structure is as follows:
 
 ## Howto run
 
-- clone first
+- clone first (if you want to use it as base for your project, use this as a template, see button above near cloning button)
 - build your own docker container based on the [Dockerfile](Dockerfile). Have a look into it how it works. 
 
 ```bash
