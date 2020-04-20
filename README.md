@@ -36,8 +36,10 @@ Et voilà, you have a running REST-Api Backend-example.
 
 You can take this as a starting point for your project 2. 
 
+
 ## Important
 
+- You can use this as base for your own application. Note that you should put your SQL files into [sql-files](sql-files) folder, have a look into the already existing files (which are from databases 1 course). The databae will be created with your schema and filled with your data. 
 - If you change your *pre-filled* database sql files, you need to (re)-create your database image and e.g. give it a new version, e.g.: 
 ```bash
 docker build -t mydbimage:0.2 .
