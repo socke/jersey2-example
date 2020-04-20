@@ -1,9 +1,9 @@
 ![Maven build status](https://github.com/FontysVenlo/jersey2-example/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 
 # Simple Jersey 2 example
-Simple jersey 2 start application with president database - used for Project at Fontys Venlo.
+Simple jersey 2 start application with **president example database** - used for Project at Fontys Venlo.
 
-This example is just a *start*, this means, no detailled explanations will be given as well as no *ready* implementation. It is also **not** mandatory to do it like this.
+This example is just a *start*, this means, no detailed explanations will be given as well as no *ready* implementation. It is also **not** mandatory to do it like this.
 
 The structure is as follows: 
 
@@ -50,7 +50,9 @@ Advise is to stick to normal version numbers.
 
 - The java application has already the correct connection parameters set up for connecting with the database, but only if you did everything like described above. If you change the passwords in the Dockerfile, of course you need to adapt it. 
 
-** Have fun and feel free to change for your project purpose **
+- Note: it could be that you have to clean your application `mvn clean` or use ```mvn clean jetty:run```
+
+**Have fun and feel free to change for your project purpose**
 
 ## Ideas
 
