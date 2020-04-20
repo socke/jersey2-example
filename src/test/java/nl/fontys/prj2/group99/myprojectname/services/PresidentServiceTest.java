@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class PresidentServiceTest {
@@ -24,7 +25,7 @@ public class PresidentServiceTest {
      */
     @Test
     public void testGetPresidentById() {
-        assertEquals("WASHINGTON G", presidentService.getPresidentById(1).getName());
+        assertThat(presidentService.getPresidentById(1).getName(), is("WASHINGTON G"));
     }
 
 }
